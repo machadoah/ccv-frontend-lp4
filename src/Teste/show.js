@@ -22,7 +22,7 @@ function Show() {
 
         consultar();
 
-    } , []  )
+    } )
 
     return(
         <div>
