@@ -41,7 +41,6 @@ function Teste() {
                         <td>{x.empresa}</td>
                         <td>{x.tecnologia}</td>
                         <td><Link to={"/testeUpdate/" + x.id}>Alterar</Link></td>
-                        <td><Link to={"/testeDelete/" + x.id}>Excluir</Link></td>
                         </tr> )
                     }
                 </tbody>
