@@ -63,7 +63,7 @@ function Update() {
         <br></br>
         Tecnologias: <input value={dados.tecnologia} type="text" required onChange={(e) => setDados({ ...dados, tecnologia: e.target.value })} />
         <br></br>
-        <button type='submit'>Enviar</button>
+        <button onClick={gravar}>Enviar</button>
       </form>
       <button onClick={excluir}>Excluir</button>
       <p>{dados.texto}</p>
