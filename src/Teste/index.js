@@ -48,6 +48,8 @@ function Teste() {
             
             <Link to="/">Voltar</Link>
 
+            <br></br>
+
             <img src="https://www.opportunityinstitute.org/wp-content/uploads/2019/03/catTaxes_briefcaseCat_2019_02_20-1-600x510.jpg" ></img>
         </div>
     )

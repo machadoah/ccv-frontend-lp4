@@ -70,8 +70,10 @@ function Update() {
       <p>{status.teste}</p>
       <h4>⚠️ Atenção: Todos os campos são de preenchimento obrigatório</h4>
       <p>Texto retornado pela API: {status.dados == null ? "" : status.dados.texto} </p>
+      
       <Link to='/teste'>Voltar</Link>
 
+<br></br>
         <img src="https://as2.ftcdn.net/v2/jpg/02/86/99/45/1000_F_286994549_XpWtlNO1yJqMvTo7lyaBxtRxlw3LQlrn.jpg" ></img>
 
     </div>

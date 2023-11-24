@@ -44,6 +44,8 @@ function Store()
 
             <Link to='/teste'>Voltar</Link>
 
+            <br></br>
+
             <img src="https://www.alphapaw.com/wp-content/uploads/2020/01/photo_2020-11-04_15-55-35.jpg" ></img>
 
         </div>
