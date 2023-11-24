@@ -15,7 +15,7 @@ function Show() {
             console.log(id)
 
             // Consulta a API
-            const resposta = await axios.get(`http://localhost:4000/teste/${useParams.id}`)
+            const resposta = await axios.get(`http://localhost:8000/api/vagas/${useParams.id}`)
             // Armazena resposta no useState
             setJson(resposta.data)
         }

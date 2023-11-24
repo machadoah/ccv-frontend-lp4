@@ -11,7 +11,7 @@ function Teste() {
 
         async function consultar(){
 
-            const resposta = await axios.get("http://localhost:8000/vagas")
+            const resposta = await axios.get("http://localhost:8000/api/vagas")
             // Armazena resposta no useState
             setJson(resposta.data.data)
             console.log(resposta) // pressione F12 e no console veja o que veio da API no backend
@@ -28,7 +28,7 @@ function Teste() {
             <table>
                 <thead>
                     <tr>
-                        <th>Titulo</th><th>Localização</th><th>Nível</th><th>Contrato</th><th>Salário</th><th>Empresa</th><th>Tecnologias</th><th>Site</th>
+                        <th>Titulo</th><th>Localização</th><th>Salário</th><th>Empresa</th><th>Tecnologias</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,17 +36,17 @@ function Teste() {
                         (x) => 
                         <tr key={x.id}>
                         <td>{x.titulo}</td>
-                        <td>{x.localizacao}</td>
-                        <td>{x.nivel}</td>
-                        <td>{x.contrato}</td>
+                        <td>{x.local}</td>
                         <td>{x.salario}</td>
                         <td>{x.empresa}</td>
-                        <td>{x.tecnologias}</td>
-                        <td>{x.site}</td>
-                        <td><Link to={"/testeUpdate/" + x.id}>Alterar</Link></td></tr> )
+                        <td>{x.tecnologia}</td>
+                        <td><Link to={"/testeUpdate/" + x.id}>Alterar</Link></td>
+                        <td><Link to={"/testeDelete/" + x.id}>Excluir</Link></td>
+                        </tr> )
                     }
                 </tbody>
             </table>
+            
             <Link to="/">Voltar</Link>
         </div>
     )

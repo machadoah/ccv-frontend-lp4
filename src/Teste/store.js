@@ -8,14 +8,10 @@ function Store()
     const [status,setStatus] = useState("");
 
     const titulo = useRef("");
-    const descricao = useRef("");
-    const localizacao = useRef("");
-    const nivel = useRef("");
-    const contrato = useRef("");
+    const local = useRef("");
     const salario = useRef();
     const empresa = useRef("");
-    const tecnologias = useRef("");
-    const site = useRef("");
+    const tecnologia = useRef("");
     const defaultValue = '';
     const defaultValueNum = 0;
 
@@ -25,34 +21,26 @@ function Store()
 
             <form onSubmit={ gravar } className='formulario'>
 
-                Titulo: <input ref={titulo} type="text" />
+                Titulo: <input ref={titulo} type="text" defaultValue={defaultValue}/>
                 <br></br>
-                Descrição: <input ref={descricao} type="textarea" defaultValue={defaultValue}/>
-                <br></br>
-                Localização: <input ref={localizacao} type="text"/>
-                <br></br>
-                Nível: <input ref={nivel} type="text" defaultValue={defaultValue}/>
-                <br></br>
-                Contrato: <input ref={contrato} type="text"/>
+
+                Localização: <input ref={local} type="text" defaultValue={defaultValue}/>
                 <br></br>
 
                 Salário: <input ref={salario} type="number" defaultValue={defaultValueNum}/>
                 <br></br>
 
-                Empresa: <input ref={empresa} type="text"/>
+                Empresa: <input ref={empresa} type="text" defaultValue={defaultValue}/>
                 <br></br>
 
-                Tecnologias: <input ref={tecnologias} type="text"/>
+                tecnologia: <input ref={tecnologia} type="text" defaultValue={defaultValue}/>
                 <br></br>
-
-                Site: <input ref={site} type="text"/>
-                <br></br>
-
 
                 <button type='submit'>Enviar</button>
             </form>
 
             <h3>{status}</h3>
+            <h4>⚠️ Atenção: Todos os campos são de preenchimento obrigatório</h4>
 
             <Link to='/teste'>Voltar</Link>
 
@@ -65,24 +53,20 @@ function Store()
 
             const json = {
                 titulo: titulo.current.value,
-                descricao: descricao.current.value,
-                localizacao: localizacao.current.value,
-                nivel: nivel.current.value,
-                contrato: contrato.current.value,
+                local: local.current.value,
                 salario: salario.current.value,
                 empresa: empresa.current.value,
-                tecnologias: tecnologias.current.value,
-                site: site.current.value,
+                tecnologia: tecnologia.current.value
             }
                           
-            const resposta = await axios.post('http://localhost:8000/vagas',json);
-            setStatus("Cliente cadastrado");
+            const resposta = await axios.post('http://localhost:8000/api/vagas',json);
+            setStatus("Vaga adicionada");
 
             // pressione F12 e no console veja o que veio da API no backend
             console.log(resposta); 
         
         } catch(erro) {
-            setStatus("Falha ao cadastrar cliente");
+            setStatus("falha ao adicionar vaga");
         }
     }
 }
