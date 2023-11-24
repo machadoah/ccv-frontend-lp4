@@ -33,3 +33,8 @@ table, th, td {
 h4{
   color: brown;
 }
+
+img{
+  width: 80%;
+  height: 20%;
+}
