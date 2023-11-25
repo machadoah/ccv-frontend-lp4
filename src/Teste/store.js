@@ -63,7 +63,8 @@ function Store()
                 tecnologia: tecnologia.current.value
             }
                           
-            const resposta = await axios.post('http://localhost:8000/api/vagas',json);
+            // const resposta = await axios.post('http://localhost:8000/api/vagas',json);
+            const resposta = await axios.post('https://ccv-backend-lp4.onrender.com/api/vagas',json);
             setStatus("Vaga adicionada");
 
             // pressione F12 e no console veja o que veio da API no backend

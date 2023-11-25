@@ -11,7 +11,8 @@ function Teste() {
 
         async function consultar(){
 
-            const resposta = await axios.get("http://localhost:8000/api/vagas")
+            // const resposta = await axios.get("http://localhost:8000/api/vagas")
+            const resposta = await axios.get("https://ccv-backend-lp4.onrender.com/api/vagas")
             // Armazena resposta no useState
             setJson(resposta.data.data)
             console.log(resposta) // pressione F12 e no console veja o que veio da API no backend

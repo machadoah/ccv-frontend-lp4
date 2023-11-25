@@ -15,7 +15,8 @@ function Show() {
             console.log(id)
 
             // Consulta a API
-            const resposta = await axios.get(`http://localhost:8000/api/vagas/${useParams.id}`)
+            // const resposta = await axios.get(`http://localhost:8000/api/vagas/${useParams.id}`)
+            const resposta = await axios.get(`https://ccv-backend-lp4.onrender.com/api/vagas/${useParams.id}`)
             // Armazena resposta no useState
             setJson(resposta.data)
         }

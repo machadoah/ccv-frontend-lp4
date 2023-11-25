@@ -42,7 +42,8 @@ function Update() {
     e.preventDefault(); // cancela o submit
     try {
       // Chama função da API enviando o json com os dados do objeto atualizado
-      const resposta = await axios.put(`http://localhost:8000/api/vagas/${id}`, dados);
+      // const resposta = await axios.put(`http://localhost:8000/api/vagas/${id}`, dados);
+      const resposta = await axios.put(`https://ccv-backend-lp4.onrender.com/api/vagas/${id}`, dados);
       setStatus(resposta.data);
       console.log(resposta); // pressione F12 e no console veja o que veio da API no backend
     } catch (erro) {
